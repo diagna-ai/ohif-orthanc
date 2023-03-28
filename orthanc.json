@@ -36,7 +36,9 @@
   "SslTrustedClientCertificates" : "trustedClientCertificates.pem",
   "AuthenticationEnabled" : true,
     "RegisteredUsers" : {
-    "mapdr" : "changestrongpassword"
+    "mapdr" : "changestrongpassword",
+    "sansiddh" : "sansiddh",
+    "dhruv" : "dhruv"
   },
   "DicomTlsEnabled" : false,
   "DicomTlsRemoteCertificateRequired" : true,
@@ -116,5 +118,5 @@
     "W001_TagsBeingReadFromStorage": true,
     "W002_InconsistentDicomTagsInDb": true
   }
-
 }
+
