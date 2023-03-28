@@ -43,18 +43,19 @@ def UploadFile(path):
             username = sys.argv[4]
             password = sys.argv[5]
 
-            # h.add_credentials(username, password)
+            h.add_credentials(username, password)
 
             # This is a custom reimplementation of the
             # "Http.add_credentials()" method for Basic HTTP Access
             # Authentication (for some weird reason, this method does
             # not always work)
             # http://en.wikipedia.org/wiki/Basic_access_authentication
-            headers['authorization'] = 'Basic ' + base64.b64encode(username + ':' + password)       
+            # creds_str = bytes(f'{username}:{password}', 'utf-8')
+            # headers['authorization'] = 'Basic ' + str(base64.b64encode(creds_str))
             
         resp, content = h.request(URL, 'POST', 
-                                  body = content,
-                                  headers = headers)
+                                    body = content,
+                                    headers = headers)
 
         if resp.status == 200:
             sys.stdout.write(" => success\n")
@@ -62,7 +63,8 @@ def UploadFile(path):
         else:
             sys.stdout.write(" => failure (Is it a DICOM file?)\n")
 
-    except:
+    except Exception as e:
+        print(e)
         sys.stdout.write(" => unable to connect (Is Orthanc running? Is there a password?)\n")
 
 
