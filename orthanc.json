@@ -1,5 +1,5 @@
 {
-  "Name" : "M A P D R",
+  "Name" : "Diagna",
   "StorageDirectory" : "/var/lib/orthanc/db",
   "IndexDirectory" : "/var/lib/orthanc/db",
   "StorageCompression" : true,
@@ -21,7 +21,7 @@
   "WebDavDeleteAllowed" : false,
   "WebDavUploadAllowed" : true,
   "DicomServerEnabled" : true,
-  "DicomAet" : "MAPDR",
+  "DicomAet" : "OCI",
   "DicomCheckCalledAet" : true,
   "DicomPort" : 4242,
   "DefaultEncoding" : "Latin1",
